@@ -1,0 +1,25 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+span a{
+    color: rgb(250, 227, 16);
+    padding: 1em;
+}  
+section {
+    display: table;
+  }
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+  
+.example-button-row button{
+ align-items: center;
+  }
+.siva{
+  color: red;
+}
+.guru{
+  color: green;
+}

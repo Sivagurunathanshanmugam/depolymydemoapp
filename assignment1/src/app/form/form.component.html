@@ -1,0 +1,65 @@
+<div class="back">
+<img src="../../assets/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="">
+<div class="black"></div>
+</div>
+<div class="application">
+    <div class="row">
+        <div class="col-sm-4"></div>
+            <div class="col-sm-4" id="header">
+                <h1>Registration</h1>
+                <div *ngIf="msg" class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Thank You For Register,Your coupencode is verified Successfully</strong>
+                    <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                <form [formGroup]="update" (ngSubmit)="updatedata()">
+                    <div class="form-group">
+                        <label >Employee Name</label>
+                        <input type="text"  style="text-transform: uppercase" formControlName="Employee Name" class="form-control" placeholder="enter the Name" >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Designation</label>
+                        <input type="text" formControlName="Designation" class="form-control" placeholder="enter the Designation ">
+                        <span class="error" *ngIf="Coupen_code.invalid && Coupen_code.touched && change()">enter the coupen code</span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Salary</label>
+                        <input type="number"   formControlName="Salary" class="form-control" placeholder="enter the Salary" >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Email</label>
+                        <input type="email"   formControlName="Email" class="form-control" placeholder="enter the Email" >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Mobile</label>
+                        <input type="number"   formControlName="Mobile" class="form-control" placeholder="enter the Mobile no" >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Qualification</label>
+                        <input type="number"   formControlName="Mobile" class="form-control" placeholder="enter the Mobile no" >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label >Manager</label>
+                        <input type="text"   formControlName="Manager" class="form-control"  >
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="example-button-row">
+                        <button class="btn btn-primary" [disabled]="update.invalid" type="submit" mat-button color="primary">update</button>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="example-button-row">
+                        <button class="btn btn-primary" [disabled]="update.invalid" type="submit" mat-button color="primary">Reset</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>

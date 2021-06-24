@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "siva": [
+    {
+      "Name": "gurunathan",
+      "Coupen_code": "AS66",
+      "id": 1
+    },
+    {
+      "Name": "durga",
+      "Coupen_code": "FGN333",
+      "id": 2
+    },
+    {
+      "Name": "kumar",
+      "Coupen_code": "SF66",
+      "id": 3
+    },
+    {
+      "Name": "natarajan",
+      "Coupen_code": "SC66",
+      "id": 5
+    }
+  ]
+}
