@@ -11,13 +11,19 @@ export class FormComponent implements OnInit {
   msg=false;
   constructor(private user:ApiService) { }
   update=new FormGroup({
-    Name:new FormControl(""),
-    Coupen_code:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(6),Validators.pattern('[A-Z0-9]*')]),
+    EmployeeName:new FormControl("",[Validators.required]),
+    Designation:new FormControl(""),
+    Salary:new FormControl(""),
+    Email:new FormControl("",[Validators.required]),
+    Mobile:new FormControl("",[Validators.minLength(10)]),
+    Qualification:new FormControl(""),
+    Manager:new FormControl(""),
+    
   })
   ngOnInit(): void {
     
   }
-  get Coupen_code(){return this.update.get('Coupen_code')}
+  get EmployeeName(){return this.update.get('EmployeeName')}
   updatedata(){
     this.user.savedata(this.update.value).subscribe(flow=>{
       this.update.reset({});
@@ -27,8 +33,6 @@ export class FormComponent implements OnInit {
   close(){
     this.msg=false;
   }
-  change(){
-    alert("Please enter the valid Coupencode");
-  }
+ 
 }
 export class ButtonOverviewExample {}

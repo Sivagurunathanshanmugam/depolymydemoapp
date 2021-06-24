@@ -12,21 +12,31 @@ export class CorrectionComponent implements OnInit {
   msg=false;
   constructor(private reupdate:ApiService,private reuser:ActivatedRoute) { }
   editer=new FormGroup({
-    Name:new FormControl(""),
-    Coupen_code:new FormControl("",[Validators.minLength(3),Validators.maxLength(6),Validators.pattern('[A-Z0-9]*')])
+    EmployeeName:new FormControl("",[Validators.required]),
+    Designation:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(6),Validators.pattern('[A-Z0-9]*')]),
+    Salary:new FormControl(""),
+    Email:new FormControl("",[Validators.required]),
+    Mobile:new FormControl("",[Validators.minLength(10)]),
+    Qualification:new FormControl(""),
+    Manager:new FormControl(""),
   })
   ngOnInit(): void {
     this.reupdate.currentdata(this.reuser.snapshot.params.id).subscribe(using=>{
       this.editer=new FormGroup({
-        Name:new FormControl(using['Name']),
-    Coupen_code:new FormControl(using['Coupen_code'],[Validators.minLength(3),Validators.maxLength(6),Validators.pattern('[A-Z0-9]*')])
+        EmployeeName:new FormControl(using['EmployeeName']),
+        Designation:new FormControl(using['Designation'],[Validators.minLength(3),Validators.maxLength(6),Validators.pattern('[A-Z0-9]*')]),
+        Salary:new FormControl(using['Salary']),
+        Email:new FormControl(using['Email'],[Validators.required]),
+        Mobile:new FormControl(using['Mobile'],[Validators.minLength(10)]),
+        Qualification:new FormControl(using['Qualification']),
+        Manager:new FormControl(using['Manager']),
       })
     })
   }
   close(){
     this.msg=false;
   }
-  get Coupen_code(){return this.editer.get('Coupen_code')}
+ 
   neweditdata(){
     this.reupdate.transferdata(this.reuser.snapshot.params.id,this.editer.value).subscribe(flow=>{
       this.msg=true;

@@ -18,24 +18,34 @@
   },
   "siva": [
     {
-      "Name": "gurunathan",
-      "Coupen_code": "AS66",
+      "EmployeeName": "siva",
+      "Designation": "Team Leader",
+      "Salary": 125000,
+      "Email": "sin@gmail.com",
+      "Mobile": 9500614285,
+      "Qualification": "B.E/B.Tech",
+      "Manager": "bg66",
       "id": 1
     },
     {
-      "Name": "durga",
-      "Coupen_code": "FGN333",
+      "EmployeeName": "guru",
+      "Designation": "Assistant",
+      "Salary": 30000,
+      "Email": "siva@gmail.com",
+      "Mobile": 8925380010,
+      "Qualification": "MSC",
+      "Manager": "ju55",
       "id": 2
     },
     {
-      "Name": "kumar",
-      "Coupen_code": "SF66",
+      "EmployeeName": "durga",
+      "Designation": "Trainee",
+      "Salary": 25000,
+      "Email": "durga@gmail.com",
+      "Mobile": 9362410050,
+      "Qualification": "B.E/B.Tech",
+      "Manager": "ub88",
       "id": 3
-    },
-    {
-      "Name": "natarajan",
-      "Coupen_code": "SC66",
-      "id": 5
     }
   ]
 }

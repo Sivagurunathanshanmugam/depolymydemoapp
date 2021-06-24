@@ -3,11 +3,11 @@
 }
 img{
     width: 100%;
-    height: 40rem;
+    height: 50rem;
 }
 .black{
     width: 100%;
-    height: 40rem;
+    height: 50rem;
     position: absolute;
     background-color: #121111de;
     top: 0%;
@@ -15,7 +15,7 @@ img{
 #header{
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 40%;
+    top: 70%;
     left: 50%;
 }
 h1{
